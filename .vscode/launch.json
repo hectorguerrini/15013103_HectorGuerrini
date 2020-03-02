@@ -1,0 +1,35 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
+            "mainClass": "OlaVsCode.src.app.App",
+            "projectName": "15013103_HectorGuerrini_5647ac31"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - EntradaDados",
+            "request": "launch",
+            "mainClass": "OlaVsCode.src.app.EntradaDados",
+            "projectName": "15013103_HectorGuerrini_5647ac31"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MeuPrograma",
+            "request": "launch",
+            "mainClass": "MeuPrograma",
+            "projectName": "15013103_HectorGuerrini_5647ac31"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        }
+    ]
+}

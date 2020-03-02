@@ -1,0 +1,28 @@
+  
+1. C:\Program Files\Java\jre1.8.0_222
+2. C:\Program Files\Java\jre1.8.0_222\bin
+3. Supondo que a class CLiente.java seja uma classe Main:
+no diretorio digite :
+
+//Compila
+javac Cliente.java
+
+//Executa
+java Cliente
+ele ja compila e executa…
+
+4. java Cliente.java
+
+5. Quando um programa é executado, ele recebe informações do ambiente em que ele está sendo executado.
+Essas informações de ambiente são passadas implicitamente via variáveis de ambiente.
+fonte: https://pt.stackoverflow.com/questions/339476/o-que-s%C3%A3o-vari%C3%A1veis-de-ambiente
+Elas são valores nomeados dinamicamente no sistema operacional, que afeta o comportamentos dos programas que o consome. 
+Elas são guardadas em uma "lista" de chave-valor.
+
+Todos os valores das variáveis de ambiente são strings não nulas.
+
+6. Se for no seu ambiente, sim.
+
+7. Entra em variaveis de ambiente  em propriedades do sistema e clica em "Novo"
+
+8. Java Home é a variavel de ambiente que aponta pro SDK do java
