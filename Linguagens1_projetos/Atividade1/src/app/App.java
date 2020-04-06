@@ -13,21 +13,33 @@ public class App {
         String nome;
         String senha;
         String email;
+        System.out.println("Informe o nome do usuário 1: ");
         nome = sc.nextLine();
+        System.out.println("Informe a senha do usuário 1: ");
         senha = sc.nextLine();
+        System.out.println("Informe o email do usuário 1: ");
         email = sc.nextLine();
         Usuarios user1 = new Usuarios(nome, senha, email);
         listaUsers.add(user1);
+
+        System.out.println("Informe o nome do usuário 2: ");
         nome = sc.nextLine();
+        System.out.println("Informe a senha do usuário 2: ");
         senha = sc.nextLine();
+        System.out.println("Informe o email do usuário 2: ");
         email = sc.nextLine();
         Usuarios user2 = new Usuarios(nome, senha, email);        
         listaUsers.add(user2);
+
+        System.out.println("Informe o nome do usuário 3: ");
         nome = sc.nextLine();
+        System.out.println("Informe a senha do usuário 3: ");
         senha = sc.nextLine();
+        System.out.println("Informe o email do usuário 3: ");
         email = sc.nextLine();
         Usuarios user3 = new Usuarios(nome, senha, email);        
         listaUsers.add(user3);
+
 
         user1.AbrirConta(1000);
         user2.AbrirConta(250);

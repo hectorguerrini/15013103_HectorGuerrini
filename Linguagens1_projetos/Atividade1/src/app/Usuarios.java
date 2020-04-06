@@ -38,11 +38,12 @@ public class Usuarios {
     }
     
     public void getInformacoes() {
-        System.out.format("{Nome: %s - Saldo: %.2f }\n",this.nome,this.conta.getSaldo());
+        System.out.format("Nome Usuário: %s - Saldo: %.2f \n",this.nome,this.conta.getSaldo());
     }
 
     public void gerarRecebimento(double valor){
         this.conta.gerarQRCode(nome, valor);
+        System.out.format("Codigo Gerado no valor de %.2f\n",valor);
     }
     public void pagarUsuario(Usuarios user) {
         if (user.conta.getQRCode() != ""){
