@@ -1,8 +1,9 @@
-package app.models;
+package app.controllers;
 
 import java.util.ArrayList;
 
 import app.enums.Horarios;
+import app.models.Membro;
 
 public class MaskSociety {
     private ArrayList<Membro> listaMembros = new ArrayList<Membro>();

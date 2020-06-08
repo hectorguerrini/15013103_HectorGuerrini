@@ -2,15 +2,18 @@ package app;
 
 import java.util.Scanner;
 
+import app.controllers.MaskSociety;
 import app.enums.Funcoes;
 import app.enums.Horarios;
 import app.models.BigBrothers;
 import app.models.HeavyLifters;
-import app.models.MaskSociety;
 import app.models.Membro;
 import app.models.MobileMembers;
 import app.models.ScriptGuys;
-
+/**
+ * Hector Guerrini Herrera 15.01310-3
+ * André Shpaisman 16.00507-4
+ */
 public class App {
     final static Scanner sc = new Scanner(System.in);
     
