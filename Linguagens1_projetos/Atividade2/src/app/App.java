@@ -17,7 +17,8 @@ public class App {
         
         MaskSociety society = new MaskSociety(Horarios.horaNormal);
         System.out.println("Bem Vindo");
-        while(true){
+        boolean run = true;
+        while(run){
             System.out.println("MENU DE OPÇÕES:\nPressione:");
             System.out.println("1- Cadastrar novo membro");
             System.out.println("2- Apresentação dos membros cadastrados");
@@ -39,11 +40,16 @@ public class App {
                     society.ApresentarMembros();
                     break;
                 case 3:
-                    for (int i = 0; i < society.getListaMembros().size(); i++) {
-                        System.out.format("%i - %s\n", i, society.getListaMembros().get(i).getNome());
+                    if (society.getListaMembros().size() > 0) {
+                        for (int i = 0; i < society.getListaMembros().size(); i++) {
+                            System.out.format("%d - %s - %s\n", i, society.getListaMembros().get(i).getNome(),society.getListaMembros().get(i).getFuncao() );
+                        }
+                        System.out.println("Digite o Id do Usuario a ser excluido: ");
+                        int index = sc.nextInt();
+                        society.excluirMembro(society.getListaMembros().get(index));
+                    } else {
+                        System.out.println("Nenhum Usuario cadastrado");
                     }
-                    int index = sc.nextInt();
-                    society.excluirMembro(society.getListaMembros().get(index));
                     break;
                 case 4:
                     society.trocarHorarioTrabalho();
@@ -51,7 +57,8 @@ public class App {
                 case 5:
                     society.PostarMensagem();
                     break;
-                case 0:                    
+                case 0:   
+                    run = false;
                     break;
                 default:
                     break;
