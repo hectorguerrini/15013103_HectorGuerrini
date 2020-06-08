@@ -1,18 +1,19 @@
 package app.models;
 
 import app.enums.Funcoes;
+import app.interfaces.Açoes;
 
 
-public abstract class Membro {
+public abstract class Membro implements Açoes {
     
-    String email;
-    String nome;
-    Funcoes funcao;
-
-    public Membro(final String email, final String nome, final Funcoes funcao) {
-        
+    private String email;
+    private String nome;
+    private Funcoes funcao;
+    public Membro(String email, String nome, Funcoes funcao) {
+        this.email = email;
+        this.nome = nome;
+        this.funcao = funcao;
     }
-    
     public String getEmail() {
         return email;
     }

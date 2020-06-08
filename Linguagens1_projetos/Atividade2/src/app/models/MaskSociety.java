@@ -12,18 +12,30 @@ public class MaskSociety {
         this.horarioTrabalho = horarioTrabalho;        
     }
 
-    public ArrayList<Membro> getListaMembros() {
-        return listaMembros;
+    public void cadastrarMembro(Membro membro) {
+        this.listaMembros.add(membro);
     }
 
-    
+    public void excluirMembro(Membro membro){
+        this.listaMembros.remove(membro);
+    }
+
     public Horarios getHorarioTrabalho() {
         return horarioTrabalho;
     }
 
-    public void setHorarioTrabalho(Horarios horarioTrabalho) {
-        this.horarioTrabalho = horarioTrabalho;
+    public void trocarHorarioTrabalho() {
+        switch (this.horarioTrabalho){
+            case horaNormal:
+                this.horarioTrabalho = Horarios.horaExtra;
+                break;
+            case horaExtra:
+                this.horarioTrabalho = Horarios.horaNormal;
+                break;
+            default:
+                break;
+        }
     }
-
+    
     
 }
