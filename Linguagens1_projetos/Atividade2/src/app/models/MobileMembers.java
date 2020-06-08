@@ -16,10 +16,10 @@ public class MobileMembers extends Membro {
     public void Mensagem(Horarios horario) {
         switch (horario) {
             case horaNormal:
-                System.out.format("%s - Happy  Coding!", this.getNome());
+                System.out.format("%s - Happy  Coding!\n", this.getNome());
                 break;
             case horaExtra:
-                System.out.format("%s - Happy_C0d1ng. Maskers", this.getNome());
+                System.out.format("%s - Happy_C0d1ng. Maskers\n", this.getNome());
                 break;
             default:
                 break;

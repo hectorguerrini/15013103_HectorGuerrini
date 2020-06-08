@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import app.enums.Horarios;
 
 public class MaskSociety {
-    private ArrayList<Membro> listaMembros;
+    private ArrayList<Membro> listaMembros = new ArrayList<Membro>();
     private Horarios horarioTrabalho;
 
     public MaskSociety(Horarios horarioTrabalho) {
@@ -20,6 +20,10 @@ public class MaskSociety {
         this.listaMembros.remove(membro);
     }
 
+    public ArrayList<Membro> getListaMembros() {
+        return listaMembros;
+    }
+    
     public Horarios getHorarioTrabalho() {
         return horarioTrabalho;
     }
@@ -47,5 +51,8 @@ public class MaskSociety {
             membro.Mensagem(this.horarioTrabalho);
         }
     }
+
+    
+
     
 }

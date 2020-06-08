@@ -13,10 +13,10 @@ public class BigBrothers extends Membro {
     public void Mensagem(Horarios horario) {
         switch (horario) {
             case horaNormal:
-                System.out.format("%s - Sempre ajudando as pessoas membros ou não S2!", this.getNome());
+                System.out.format("%s - Sempre ajudando as pessoas membros ou não S2!\n", this.getNome());
                 break;
             case horaExtra:
-                System.out.format("%s - ...", this.getNome());
+                System.out.format("%s - ...\n", this.getNome());
                 break;
             default:
                 break;

@@ -13,10 +13,10 @@ public class HeavyLifters extends Membro {
     public void Mensagem(Horarios horario) {
         switch (horario) {
             case horaNormal:
-                System.out.format("%s - Podem contar conosco!", this.getNome());
+                System.out.format("%s - Podem contar conosco!\n", this.getNome());
                 break;
             case horaExtra:
-                System.out.format("%s - N00b_qu3_n_Se_r3pita.bat", this.getNome());
+                System.out.format("%s - N00b_qu3_n_Se_r3pita.bat\n", this.getNome());
                 break;
             default:
                 break;
