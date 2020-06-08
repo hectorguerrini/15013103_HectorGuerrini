@@ -10,6 +10,10 @@ public class ScriptGuys extends Membro {
         
     }
 
+    
+    /** 
+     * @param horario
+     */
     @Override
     public void Mensagem(Horarios horario) {
         switch (horario) {

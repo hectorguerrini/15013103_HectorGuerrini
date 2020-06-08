@@ -13,6 +13,11 @@ import app.models.ScriptGuys;
 
 public class App {
     final static Scanner sc = new Scanner(System.in);
+    
+    /** 
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
         
         MaskSociety society = new MaskSociety(Horarios.horaNormal);
@@ -68,6 +73,10 @@ public class App {
         }
         
     }
+    
+    /** 
+     * @return Membro
+     */
     public static Membro menuCadastroMembro() {
         System.out.println("Menu Cadastro de Membros:");
         

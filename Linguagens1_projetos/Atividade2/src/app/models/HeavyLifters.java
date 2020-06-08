@@ -9,6 +9,10 @@ public class HeavyLifters extends Membro {
         super(email, nome, funcao);        
     }
 
+    
+    /** 
+     * @param horario
+     */
     @Override
     public void Mensagem(Horarios horario) {
         switch (horario) {

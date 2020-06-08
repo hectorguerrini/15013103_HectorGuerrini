@@ -12,6 +12,10 @@ public class MobileMembers extends Membro {
         
     }
     
+    
+    /** 
+     * @param horario
+     */
     @Override
     public void Mensagem(Horarios horario) {
         switch (horario) {

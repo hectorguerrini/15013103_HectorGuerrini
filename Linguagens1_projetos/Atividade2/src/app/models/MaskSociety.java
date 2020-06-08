@@ -12,18 +12,34 @@ public class MaskSociety {
         this.horarioTrabalho = horarioTrabalho;        
     }
 
+    
+    /** 
+     * @param membro
+     */
     public void cadastrarMembro(Membro membro) {
         this.listaMembros.add(membro);
     }
 
+    
+    /** 
+     * @param membro
+     */
     public void excluirMembro(Membro membro){
         this.listaMembros.remove(membro);
     }
 
+    
+    /** 
+     * @return ArrayList<Membro>
+     */
     public ArrayList<Membro> getListaMembros() {
         return listaMembros;
     }
     
+    
+    /** 
+     * @return Horarios
+     */
     public Horarios getHorarioTrabalho() {
         return horarioTrabalho;
     }
