@@ -41,7 +41,7 @@ public abstract class Membro implements PostarMensagem, Apresentacoes {
 
     @Override
     public String toString() {
-        return "Membro {email=" + email + ", funcao=" + funcao + ", nome=" + nome + "}";
+        return "Membro: \nE-mail: " + email +"\n" + "Função: " + funcao + "\n"+ "Nome: " + nome + "\n";
     }
     
 }
