@@ -1,10 +1,11 @@
 package app.models;
 
 import app.enums.Funcoes;
-import app.interfaces.Açoes;
+import app.interfaces.Apresentacoes;
+import app.interfaces.PostarMensagem;
 
 
-public abstract class Membro implements Açoes {
+public abstract class Membro implements PostarMensagem, Apresentacoes {
     
     private String email;
     private String nome;

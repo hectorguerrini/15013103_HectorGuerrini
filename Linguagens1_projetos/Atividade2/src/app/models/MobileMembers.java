@@ -10,12 +10,14 @@ public class MobileMembers extends Membro {
         super(email, nome, funcao);
         
     }
-    @Override
-    public void PostarMensagem() {
-        
-    }
-    @Override
-    public void Apresentação() {
-        
-    }
+	@Override
+	public void Mensagem() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void Apresentar() {
+		// TODO Auto-generated method stub
+		
+	}
 }
