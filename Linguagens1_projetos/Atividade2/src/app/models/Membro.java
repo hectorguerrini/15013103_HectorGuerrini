@@ -38,5 +38,10 @@ public abstract class Membro implements PostarMensagem, Apresentacoes {
     public void setFuncao(Funcoes funcao) {
         this.funcao = funcao;
     }
+
+    @Override
+    public String toString() {
+        return "Membro {email=" + email + ", funcao=" + funcao + ", nome=" + nome + "}";
+    }
     
 }
