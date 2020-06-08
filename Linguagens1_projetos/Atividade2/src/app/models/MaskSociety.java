@@ -36,6 +36,16 @@ public class MaskSociety {
                 break;
         }
     }
-    
+
+    public void ApresentarMembros() {
+        for (Membro membro : listaMembros) {
+            membro.Apresentar();
+        }
+    }
+    public void PostarMensagem() {
+        for (Membro membro : listaMembros) {
+            membro.Mensagem(this.horarioTrabalho);
+        }
+    }
     
 }
