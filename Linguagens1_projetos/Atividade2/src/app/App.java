@@ -9,6 +9,7 @@ public class App {
         System.out.println("4- Trocar jornada de trabalho");
         System.out.println("5- Postar mensagem");
         System.out.println("0- Sair do sistema");
+        System.out.println("Jornada de trabalho atual: XXX");
     }
 }
 //Cadastrar novo membro
