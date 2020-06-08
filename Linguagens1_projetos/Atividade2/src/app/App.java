@@ -20,7 +20,7 @@ public class App {
             System.out.println("0- Sair do sistema");
             System.out.println("Jornada de trabalho atual: " + society.getHorarioTrabalho());
             int menu = sc.nextInt();
-
+            
             switch (menu) {
                 case 1:
 
@@ -30,12 +30,15 @@ public class App {
                 default:
                     break;
             }
+            sc.close();
         }
+        
     }
     public static Membro menuCadastroMembro() {
         return null;
         
     }
+    
 }
 
 //Cadastrar novo membro
