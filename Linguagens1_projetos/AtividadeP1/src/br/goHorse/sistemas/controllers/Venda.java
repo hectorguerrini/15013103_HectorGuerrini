@@ -58,32 +58,31 @@ public class Venda {
 	 * Método para alterar um pedido que esteja na lista de pedidos.
 	 */
 	public void alterarPedido() {
-		
-		this.verificarPedidos();
-		while (true) {
-			try {
-				System.out.println("Digite o ID do pedido para altera-lo: ");
-				String iD = sc.nextLine();		
-
-				Pedido selectPedido = this.getPedidoFromID(iD);
-
-				System.out.println("Digite o Novo Estado do pedido: ");
-				selectPedido.setEstadoPedido(selectEstado());
-
-				System.out.println("Pedido alterado");
-				System.out.println(selectPedido);
-				break;
-			} catch(ArrayIndexOutOfBoundsException e){
-				System.out.println("Opção invalida! digite novamente a opção de estado");
-			} catch (IDNotFoundException e) {
-				System.out.println(e.getMessage());
-			} catch (Exception e){
-				System.out.println(e.getMessage());
-				break;
+		if(auth.confirmacaoUsuario(this.userLogged)){
+			this.verificarPedidos();
+			while (true) {
+				try {
+					System.out.println("Digite o ID do pedido para altera-lo: ");
+					String iD = sc.nextLine();		
+	
+					Pedido selectPedido = this.getPedidoFromID(iD);
+	
+					System.out.println("Digite o Novo Estado do pedido: ");
+					selectPedido.setEstadoPedido(selectEstado());
+	
+					System.out.println("Pedido alterado");
+					System.out.println(selectPedido);
+					break;
+				} catch(ArrayIndexOutOfBoundsException e){
+					System.out.println("Opção invalida! digite novamente a opção de estado");
+				} catch (IDNotFoundException e) {
+					System.out.println(e.getMessage());
+				} catch (Exception e){
+					System.out.println(e.getMessage());
+					break;
+				}
 			}
-		}
-		
-
+		}				
 	}
 	
 	

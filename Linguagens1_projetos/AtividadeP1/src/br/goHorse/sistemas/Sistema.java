@@ -34,5 +34,6 @@ public class Sistema {
 			}
 			System.out.println();
 		} while (menu != 0);
+		System.out.println("Obrigado Por utilizar o Sistema da goHorse!");
 	}
 }
