@@ -23,7 +23,9 @@ public class App {
 				case 1:										
 					sistemaVendas.novaVenda();
 					break;
-			
+				case 2:
+					sistemaVendas.verificarPedidos();
+					break;
 				default:
 					break;
 			}
