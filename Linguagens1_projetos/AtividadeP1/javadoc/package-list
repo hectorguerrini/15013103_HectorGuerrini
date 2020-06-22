@@ -1,5 +1,6 @@
 br.goHorse.sistemas
 br.goHorse.sistemas.controllers
 br.goHorse.sistemas.enums
+br.goHorse.sistemas.exceptions
 br.goHorse.sistemas.interfaces
 br.goHorse.sistemas.models

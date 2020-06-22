@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import br.goHorse.sistemas.enums.EstadoPedido;
 import br.goHorse.sistemas.enums.FormaPagamento;
+import br.goHorse.sistemas.exceptions.IDNotFoundException;
 import br.goHorse.sistemas.models.Pedido;
 import br.goHorse.sistemas.models.Usuario;
 
@@ -18,7 +19,9 @@ public class Venda {
 	public Venda(Usuario userLogged) {
 		this.userLogged = userLogged;
 	}
-
+	/**
+	 * Método para realizar uma nova venda no sistema.
+	 */
 	public void novaVenda(){		
 		if(auth.confirmacaoUsuario(this.userLogged)){
 			System.out.println("NOVA VENDA: ");
@@ -42,12 +45,18 @@ public class Venda {
 			System.out.println("Pedido Realizado");			
 		}				
 	}
+	/**
+	 * Método para verifcar todos os pedidos
+	 */
 	public void verificarPedidos() {
 		System.out.println("LISTA DE PEDIDOS:");
 		for (Pedido pedido : listaPedidos) {
 			System.out.println(pedido);
 		}
 	}
+	/**
+	 * Método para alterar um pedido que esteja na lista de pedidos.
+	 */
 	public void alterarPedido() {
 		
 		this.verificarPedidos();
@@ -66,7 +75,7 @@ public class Venda {
 				break;
 			} catch(ArrayIndexOutOfBoundsException e){
 				System.out.println("Opção invalida! digite novamente a opção de estado");
-			} catch (ClassNotFoundException e) {
+			} catch (IDNotFoundException e) {
 				System.out.println(e.getMessage());
 			} catch (Exception e){
 				System.out.println(e.getMessage());
@@ -79,6 +88,7 @@ public class Venda {
 	
 	
 	/** 
+	 * Método para selecionar as possíveis formas de pagamento.
 	 * @return FormaPagamento
 	 * @throws ArrayIndexOutOfBoundsException
 	 */
@@ -92,7 +102,8 @@ public class Venda {
 	}
 	
 	/** 
-	 * @return EstadoPedido
+	 * Método para selecionar os possíveis estados do pedido.
+	 * @return EstadoPedido (REALIZADO, PREPARACAO, SAIU_PARA_ENTREGA, ENTREGUE, DEVOLVIDO)
 	 * @throws Exception
 	 * @throws ArrayIndexOutOfBoundsException
 	 */
@@ -111,21 +122,23 @@ public class Venda {
 
 	
 	/** 
-	 * @param iD
-	 * @return Pedido
-	 * @throws ClassNotFoundException
+	 * Método para pegar o pedido a partir do ID na lista de pedidos.
+	 * @param iD do pedido
+	 * @return Pedido objeto do pedido
+	 * @throws IDNotFoundException
 	 */
-	private Pedido getPedidoFromID(String iD) throws ClassNotFoundException {
+	private Pedido getPedidoFromID(String iD) throws IDNotFoundException {
 		for (Pedido pedido : listaPedidos) {
 			if(pedido.getID().equals(iD)){
 				return pedido;
 			}
 		}
-		throw new ClassNotFoundException("ID não encontrado");
+		throw new IDNotFoundException("ID não encontrado");
 	}
 
 	
 	/** 
+	 * Método para gerar ID aleatorio de tamanho 3.
 	 * @return String
 	 */
 	private String geradorId(){

@@ -9,7 +9,8 @@ public class Authenticate implements Auth {
 	final static Scanner sc = new Scanner(System.in);
 	
 	/** 
-	 * @param user
+	 * Método de confirmação de usuario.
+	 * @param user Usuario Logado
 	 * @return boolean
 	 */
 	public boolean confirmacaoUsuario(Usuario user){
@@ -22,8 +23,9 @@ public class Authenticate implements Auth {
 	}
 	
 	/** 
-	 * @param user
-	 * @param senha
+	 * Método do contrato para validar senha.
+	 * @param user Usuario Logado
+	 * @param senha valor a ser comparado
 	 * @return boolean
 	 */
 	@Override

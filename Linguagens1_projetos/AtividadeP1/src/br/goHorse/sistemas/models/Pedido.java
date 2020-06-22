@@ -20,6 +20,7 @@ public class Pedido {
 	
 	
 	/** 
+	 * Retorna o ID do pedido
 	 * @return String
 	 */
 	public String getID() {
@@ -27,7 +28,8 @@ public class Pedido {
 	}
 	
 	/** 
-	 * @param estadoPedido
+	 * Atribui o estado do pedido a um novo estado
+	 * @param estadoPedido REALIZADO, PREPARACAO, SAIU_PARA_ENTREGA, ENTREGUE, DEVOLVIDO
 	 */
 	public void setEstadoPedido(EstadoPedido estadoPedido) {
 		this.estadoPedido = estadoPedido;

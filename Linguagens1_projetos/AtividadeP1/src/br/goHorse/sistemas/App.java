@@ -4,8 +4,9 @@ public class App {
 	
     
 	/** 
-	 * @param args
-	 * @throws Exception
+	 * Main
+	 * @param args valores de input
+	 * @throws Exception caso houver erro
 	 */
 	public static void main(String[] args) throws Exception {
 		Sistema.run();				
