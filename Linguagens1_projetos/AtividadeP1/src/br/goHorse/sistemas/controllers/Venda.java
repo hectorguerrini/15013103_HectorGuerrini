@@ -32,7 +32,7 @@ public class Venda {
 					fPagamento = this.selectFormaPgto();	
 					break;
 				} catch (ArrayIndexOutOfBoundsException e) {
-					System.out.println("Opção invalida! digite novamento a opção de pagamento");
+					System.out.println("Opção invalida! digite novamente a opção de pagamento");
 				}		
 			}
 			
@@ -49,10 +49,29 @@ public class Venda {
 		}
 	}
 	public void alterarPedido() {
-		this.verificarPedidos();
-		System.out.println("Digite o ID do pedido para altera-lo: ");
-		String iD = sc.nextLine();
 		
+		this.verificarPedidos();
+		while (true) {
+			try {
+				System.out.println("Digite o ID do pedido para altera-lo: ");
+				String iD = sc.nextLine();		
+
+				Pedido selectPedido = this.getPedidoFromID(iD);
+
+				System.out.println("Digite o Novo Estado do pedido: ");
+				selectPedido.setEstadoPedido(selectEstado());
+
+				System.out.println("Pedido alterado");
+				System.out.println(selectPedido);
+				break;
+			} catch(ArrayIndexOutOfBoundsException e){
+				System.out.println("Opção invalida! digite novamente a opção de estado");
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+		}
+		
+
 	}
 	
 	private FormaPagamento selectFormaPgto() throws ArrayIndexOutOfBoundsException{		
@@ -75,6 +94,16 @@ public class Venda {
 		} 
 		return EstadoPedido.values()[estado-1];
 	}
+
+	private Pedido getPedidoFromID(String iD) throws Exception{	
+		for (Pedido pedido : listaPedidos) {
+			if(pedido.getID().equals(iD)){
+				return pedido;
+			}
+		}
+		throw new Exception("ID não encontrado");
+	}
+
 	private String geradorId(){
 		Random random = new Random();
 		String idGerado = "";
