@@ -9,5 +9,16 @@ public class Pedido {
 	private Double valor;
 	private FormaPagamento formaPagamento;
 	private EstadoPedido estadoPedido;
+
+	public Pedido(String iD, String descricao, Double valor, FormaPagamento formaPagamento, EstadoPedido estadoPedido) {
+		ID = iD;
+		this.descricao = descricao;
+		this.valor = valor;
+		this.formaPagamento = formaPagamento;
+		this.estadoPedido = estadoPedido;
+	}
 	
+	public void setEstadoPedido(EstadoPedido estadoPedido) {
+		this.estadoPedido = estadoPedido;
+	}
 }
