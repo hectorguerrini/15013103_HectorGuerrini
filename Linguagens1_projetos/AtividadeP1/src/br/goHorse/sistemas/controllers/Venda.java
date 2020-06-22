@@ -77,6 +77,11 @@ public class Venda {
 
 	}
 	
+	
+	/** 
+	 * @return FormaPagamento
+	 * @throws ArrayIndexOutOfBoundsException
+	 */
 	private FormaPagamento selectFormaPgto() throws ArrayIndexOutOfBoundsException{		
 		System.out.println("FORMAS DE PAGAMENTO: ");
 		for(int i = 1; i <= FormaPagamento.values().length; i++) {
@@ -85,6 +90,12 @@ public class Venda {
 		int fPgto = Integer.parseInt(sc.nextLine());
 		return FormaPagamento.values()[fPgto-1];
 	}
+	
+	/** 
+	 * @return EstadoPedido
+	 * @throws Exception
+	 * @throws ArrayIndexOutOfBoundsException
+	 */
 	private EstadoPedido selectEstado() throws Exception, ArrayIndexOutOfBoundsException {
 		System.out.println("OPCOES DE ESTADOS DE PEDIDO: ");
 		for(int i = 1; i <= EstadoPedido.values().length; i++) {
@@ -98,6 +109,12 @@ public class Venda {
 		return EstadoPedido.values()[estado-1];
 	}
 
+	
+	/** 
+	 * @param iD
+	 * @return Pedido
+	 * @throws ClassNotFoundException
+	 */
 	private Pedido getPedidoFromID(String iD) throws ClassNotFoundException {
 		for (Pedido pedido : listaPedidos) {
 			if(pedido.getID().equals(iD)){
@@ -107,6 +124,10 @@ public class Venda {
 		throw new ClassNotFoundException("ID não encontrado");
 	}
 
+	
+	/** 
+	 * @return String
+	 */
 	private String geradorId(){
 		Random random = new Random();
 		String idGerado = "";

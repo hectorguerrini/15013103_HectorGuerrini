@@ -7,6 +7,11 @@ import br.goHorse.sistemas.models.Usuario;
 
 public class Authenticate implements Auth {
 	final static Scanner sc = new Scanner(System.in);
+	
+	/** 
+	 * @param user
+	 * @return boolean
+	 */
 	public boolean confirmacaoUsuario(Usuario user){
 		
 		System.out.println("Validação de Usuario.");
@@ -15,6 +20,12 @@ public class Authenticate implements Auth {
 		boolean valido = this.validarSenha(user, senha);		
 		return valido;
 	}
+	
+	/** 
+	 * @param user
+	 * @param senha
+	 * @return boolean
+	 */
 	@Override
 	public boolean validarSenha(Usuario user, String senha) {
 		if(user.getSenha().equals(senha)){

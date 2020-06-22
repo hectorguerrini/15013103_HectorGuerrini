@@ -18,16 +18,28 @@ public class Pedido {
 		this.estadoPedido = estadoPedido;
 	}
 	
+	
+	/** 
+	 * @return String
+	 */
 	public String getID() {
 		return ID;
 	}
+	
+	/** 
+	 * @param estadoPedido
+	 */
 	public void setEstadoPedido(EstadoPedido estadoPedido) {
 		this.estadoPedido = estadoPedido;
 	}
 
+	
+	/** 
+	 * @return String
+	 */
 	@Override
 	public String toString() {
-		return "Pedido { "+ "ID=" + ID + ", descricao=" + descricao + ", estadoPedido=" + estadoPedido + ", formaPagamento="
+		return "Pedido{ "+ "ID=" + ID + ", descricao=" + descricao + ", estadoPedido=" + estadoPedido + ", formaPagamento="
 				+ formaPagamento + ", valor=" + valor + " }";
 	}
 }

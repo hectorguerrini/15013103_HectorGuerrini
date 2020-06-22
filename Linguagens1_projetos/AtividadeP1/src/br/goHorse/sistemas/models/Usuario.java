@@ -10,22 +10,21 @@ public class Usuario {
 		this.email = email;
 		this.senha = senha;
 	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
+	
+	/** 
+	 * @return String
+	 */
 	public String getSenha() {
 		return senha;
 	}
 
+	
+	/** 
+	 * @return String
+	 */
 	@Override
 	public String toString() {
-		return "Usuario {"+ "email=" + email + ", nome=" + nome + ", senha=" + senha + "}";
+		return "Usuario{ "+ "email=" + email + ", nome=" + nome + ", senha=" + senha + " }";
 	}
 
 	

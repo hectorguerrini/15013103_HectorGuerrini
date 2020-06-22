@@ -2,7 +2,12 @@ package br.goHorse.sistemas;
 
 public class App {
 	
-    public static void main(String[] args) throws Exception {
+    
+	/** 
+	 * @param args
+	 * @throws Exception
+	 */
+	public static void main(String[] args) throws Exception {
 		Sistema.run();				
     }
 }
