@@ -66,8 +66,11 @@ public class Venda {
 				break;
 			} catch(ArrayIndexOutOfBoundsException e){
 				System.out.println("Opção invalida! digite novamente a opção de estado");
-			} catch (Exception e) {
+			} catch (ClassNotFoundException e) {
 				System.out.println(e.getMessage());
+			} catch (Exception e){
+				System.out.println(e.getMessage());
+				break;
 			}
 		}
 		
@@ -82,7 +85,7 @@ public class Venda {
 		int fPgto = Integer.parseInt(sc.nextLine());
 		return FormaPagamento.values()[fPgto-1];
 	}
-	private EstadoPedido selectEstado() throws ArrayIndexOutOfBoundsException{		
+	private EstadoPedido selectEstado() throws Exception, ArrayIndexOutOfBoundsException {
 		System.out.println("OPCOES DE ESTADOS DE PEDIDO: ");
 		for(int i = 1; i <= EstadoPedido.values().length; i++) {
 			System.out.format("%d - %s\n", i, EstadoPedido.values()[i-1]);
@@ -90,18 +93,18 @@ public class Venda {
 		System.out.println("0 - Sair");		
 		int estado = Integer.parseInt(sc.nextLine());
 		if(estado == 0){
-			return null;
+			throw new Exception("Operacao Cancelada!");
 		} 
 		return EstadoPedido.values()[estado-1];
 	}
 
-	private Pedido getPedidoFromID(String iD) throws Exception{	
+	private Pedido getPedidoFromID(String iD) throws ClassNotFoundException {
 		for (Pedido pedido : listaPedidos) {
 			if(pedido.getID().equals(iD)){
 				return pedido;
 			}
 		}
-		throw new Exception("ID não encontrado");
+		throw new ClassNotFoundException("ID não encontrado");
 	}
 
 	private String geradorId(){
