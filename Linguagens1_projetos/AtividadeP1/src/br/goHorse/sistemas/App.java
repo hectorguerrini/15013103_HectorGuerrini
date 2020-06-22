@@ -3,12 +3,15 @@ package br.goHorse.sistemas;
 import java.util.Scanner;
 
 import br.goHorse.sistemas.controllers.Venda;
+import br.goHorse.sistemas.models.Usuario;
 
 public class App {
 	final static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) throws Exception {
 		int menu;
-		Venda sistemaVendas = new Venda();
+		Usuario user = new Usuario("Usuario de Teste", "teste@user.com", "123456");
+		Venda sistemaVendas = new Venda(user);
+		
 		do {
 			System.out.println("Pizzaria o Rato que Ri!");
 			System.out.println("1 - Nova Venda");
@@ -17,15 +20,14 @@ public class App {
 			System.out.println("0 - Sair");
 			menu = sc.nextInt();
 			switch (menu) {
-				case 1:
-					System.out.println("Digite a descrição do pedido: ");
-					String inDesc = sc.next();					
+				case 1:										
 					sistemaVendas.novaVenda();
 					break;
 			
 				default:
 					break;
 			}
+			System.out.println();
 		} while (menu != 0);
 		
     }
