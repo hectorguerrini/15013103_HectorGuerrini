@@ -3,14 +3,18 @@ package Atividade3;
 import java.util.Scanner;
 
 import Atividade3.controllers.AnimeController;
+import Atividade3.controllers.MangaController;
+import Atividade3.interfaces.IController;
 
 public class Sistema {
-    private AnimeController animeController;
-    private Scanner scanner;
+    private IController animeController;
+    private IController mangaController;
+    private Scanner sc;
 
     public Sistema() {
         animeController = new AnimeController();
-        scanner = new Scanner(System.in);
+        mangaController = new MangaController();
+        sc = new Scanner(System.in);
     }
 
     public void run() {
@@ -19,16 +23,20 @@ public class Sistema {
         boolean alive = true;
         do{
             menu();
-            int opcao = Integer.parseInt(scanner.next());
+            int opcao = Integer.parseInt(sc.next());
+            String search;
+            System.out.println("Pesquisar: ");
             switch (opcao){
                 case 0:
                     alive = false;
                     break;
                 case 1:
-                    animeController.getAnimes("naruto");
+                    search = sc.next();
+                    animeController.get(search);
                     break;
                 case 2:
-                    
+                    search = sc.next();
+                    mangaController.get(search);
                     break;            
                 default:
                     System.out.println("Opcao Invalida!");
