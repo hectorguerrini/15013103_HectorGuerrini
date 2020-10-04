@@ -1,6 +1,10 @@
 package Atividade3;
+
+import Atividade3.controllers.AnimeController;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        AnimeController controller = new AnimeController();
+        controller.getAnimes();
     }
 }
