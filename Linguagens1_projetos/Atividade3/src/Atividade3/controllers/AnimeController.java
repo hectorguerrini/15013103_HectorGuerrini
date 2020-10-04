@@ -13,8 +13,8 @@ public class AnimeController {
         this.dao = new AnimeDao();        
     }
  
-    public void getAnimes(){
-        this.list = this.dao.connectAPI();
+    public void getAnimes(String search){
+        this.list = this.dao.getListAnimes(search);
         for (AnimeModel animeModel : list) {
             System.out.println(animeModel);
         }

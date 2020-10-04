@@ -18,13 +18,13 @@ public class AnimeDao {
 
     }
 
-    public List<AnimeModel> connectAPI() {
+    public List<AnimeModel> getListAnimes(String search) {
         try {
             HttpClient client = HttpClient.newBuilder().build();
-            HttpRequest request = HttpRequest.newBuilder().GET().uri(URI.create("https://api.jikan.moe/v3/search/anime?q=naruto")).build();
+            HttpRequest request = HttpRequest.newBuilder().GET().uri(URI.create("https://api.jikan.moe/v3/search/anime?q="+search)).build();
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             System.out.println("Status Code:" + response.statusCode());
-            System.out.println("Recebidos:");            
+                   
             JSONObject meuJson = new JSONObject(response.body());
             JSONArray array = meuJson.getJSONArray("results");
             return AnimeModel.fromJsonArray(array);

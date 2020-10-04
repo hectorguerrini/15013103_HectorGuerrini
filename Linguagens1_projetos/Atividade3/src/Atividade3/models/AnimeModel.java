@@ -22,8 +22,7 @@ public class AnimeModel {
     }
 
     
-    public static AnimeModel fromJson(JSONObject json) {
-        
+    public static AnimeModel fromJson(JSONObject json) {        
         return new AnimeModel(
                 json.getString("title"),
                 json.getString("image_url"),
@@ -33,8 +32,7 @@ public class AnimeModel {
         );        
     }
 
-    public static List<AnimeModel> fromJsonArray(JSONArray json) {
-        
+    public static List<AnimeModel> fromJsonArray(JSONArray json) {        
         JSONArray array = new JSONArray(json);
         List<AnimeModel> animes = new ArrayList<>();
         for (Object anime :
@@ -43,6 +41,7 @@ public class AnimeModel {
         }
         return animes;
     }
+
 
     @Override
     public String toString() {
