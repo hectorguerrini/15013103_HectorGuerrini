@@ -34,21 +34,40 @@ public class MangaDao implements IDAO<MangaModel>, IDAOFields {
     }
 
 
+    
+    /** 
+     * @return String
+     */
     @Override
     public String getTableName() {        
         return "mangas";
     }
 
+    
+    /** 
+     * @param table
+     * @return String
+     */
     @Override
     public String getInsertString(String table) {
         return "INSERT INTO "+ table + " (title, image_url, synopsis, chapters, volumes, type, score) VALUES (?, ?, ?, ?, ?, ?, ?);";
     }
 
+    
+    /** 
+     * @param table
+     * @return String
+     */
     @Override
     public String getSelectConditionalString(String table) {
         return "SELECT * FROM " + table + " WHERE ";
     }
 
+    
+    /** 
+     * @param search
+     * @return List<MangaModel>
+     */
     @Override
     public List<MangaModel> getListDB(String search) {
         List<MangaModel> list = new ArrayList<>();
@@ -75,6 +94,10 @@ public class MangaDao implements IDAO<MangaModel>, IDAOFields {
         return list;
     }
 
+    
+    /** 
+     * @param manga
+     */
     @Override
     public void insertTable(MangaModel manga) {
         try{
@@ -93,6 +116,11 @@ public class MangaDao implements IDAO<MangaModel>, IDAOFields {
 
     }
 
+    
+    /** 
+     * @param search
+     * @return List<MangaModel>
+     */
     @Override
     public List<MangaModel> getListApi(String search) {
         try {

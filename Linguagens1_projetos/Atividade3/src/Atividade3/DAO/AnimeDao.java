@@ -33,6 +33,11 @@ public class AnimeDao implements IDAO<AnimeModel>,IDAOFields {
         }
     }
 
+    
+    /** 
+     * @param search
+     * @return List<AnimeModel>
+     */
     @Override
     public List<AnimeModel> getListDB(String search) {
         List<AnimeModel> list = new ArrayList<>();
@@ -57,6 +62,10 @@ public class AnimeDao implements IDAO<AnimeModel>,IDAOFields {
         return list;
     }
 
+    
+    /** 
+     * @param anime
+     */
     @Override
     public void insertTable(AnimeModel anime) {
         try{
@@ -72,6 +81,11 @@ public class AnimeDao implements IDAO<AnimeModel>,IDAOFields {
         }
     }
 
+    
+    /** 
+     * @param search
+     * @return List<AnimeModel>
+     */
     @Override
     public List<AnimeModel> getListApi(String search) {
         try {
@@ -88,16 +102,30 @@ public class AnimeDao implements IDAO<AnimeModel>,IDAOFields {
         }
     }
 
+    
+    /** 
+     * @return String
+     */
     @Override
     public String getTableName() {
         return "animes";
     }
 
+    
+    /** 
+     * @param table
+     * @return String
+     */
     @Override
     public String getInsertString(String table) {
         return "INSERT INTO "+ table + " (title, image_url, synopsis, episodes, score) VALUES (?, ?, ?, ?, ?);";
     }
 
+    
+    /** 
+     * @param table
+     * @return String
+     */
     @Override
     public String getSelectConditionalString(String table) {
         return "SELECT * FROM " + table + " WHERE ";

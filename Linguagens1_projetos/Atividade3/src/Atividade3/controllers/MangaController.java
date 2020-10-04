@@ -14,6 +14,10 @@ public class MangaController implements IController{
         this.dao = new MangaDao();
     }
 
+    
+    /** 
+     * @param search
+     */
     @Override
     public void get(String search) {
         this.list = this.dao.getListDB(search);

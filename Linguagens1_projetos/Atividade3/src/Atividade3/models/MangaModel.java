@@ -26,6 +26,11 @@ public class MangaModel {
         this.score = score;
     }
 
+    
+    /** 
+     * @param json
+     * @return MangaModel
+     */
     public static MangaModel fromJson(JSONObject json) {        
         return new MangaModel(
                 json.getString("title"),
@@ -38,6 +43,11 @@ public class MangaModel {
         );        
     }
 
+    
+    /** 
+     * @param json
+     * @return List<MangaModel>
+     */
     public static List<MangaModel> fromJsonArray(JSONArray json) {                
         List<MangaModel> mangas = new ArrayList<>();
         for (Object manga :
@@ -49,34 +59,66 @@ public class MangaModel {
 
 
 
+    
+    /** 
+     * @return String
+     */
     public String getTitle() {
         return title;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getImage_url() {
         return image_url;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getSynopsis() {
         return synopsis;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getChapters() {
         return chapters;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getVolumes() {
         return volumes;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getType() {
         return type;
     }
 
+    
+    /** 
+     * @return double
+     */
     public double getScore() {
         return score;
     }
 
+    
+    /** 
+     * @return String
+     */
     @Override
     public String toString() {
         return "MangaModel [title=" + title + ", image_url=" + image_url + ", score=" + score + ", synopsis="

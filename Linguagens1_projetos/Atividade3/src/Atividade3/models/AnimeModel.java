@@ -22,6 +22,11 @@ public class AnimeModel {
     }
 
     
+    
+    /** 
+     * @param json
+     * @return AnimeModel
+     */
     public static AnimeModel fromJson(JSONObject json) {        
         return new AnimeModel(
                 json.getString("title"),
@@ -32,6 +37,11 @@ public class AnimeModel {
         );        
     }
 
+    
+    /** 
+     * @param json
+     * @return List<AnimeModel>
+     */
     public static List<AnimeModel> fromJsonArray(JSONArray json) {                
         List<AnimeModel> animes = new ArrayList<>();
         for (Object anime :
@@ -42,6 +52,10 @@ public class AnimeModel {
     }
 
 
+    
+    /** 
+     * @return String
+     */
     @Override
     public String toString() {
         return "AnimeModel { \ntitle= " + title + ",\n image_url= " + image_url + ",\n score= " + score + ",\n synopsis= "
@@ -49,22 +63,42 @@ public class AnimeModel {
                  + "\n}";
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getTitle() {
         return title;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getImage_url() {
         return image_url;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getSynopsis() {
         return synopsis;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getEpisodes() {
         return episodes;
     }
 
+    
+    /** 
+     * @return double
+     */
     public double getScore() {
         return score;
     }

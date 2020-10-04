@@ -15,6 +15,11 @@ public class AnimeController implements IController {
     }
     
 
+    
+    /** 
+     * Função para retornar a lista de animes por titulo
+     * @param search Variavel de pesquisa de animes por titulo
+     */
     @Override
     public void get(String search) {
         this.list = this.dao.getListDB(search);
