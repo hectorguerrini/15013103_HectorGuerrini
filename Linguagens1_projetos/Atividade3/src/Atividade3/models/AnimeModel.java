@@ -32,11 +32,10 @@ public class AnimeModel {
         );        
     }
 
-    public static List<AnimeModel> fromJsonArray(JSONArray json) {        
-        JSONArray array = new JSONArray(json);
+    public static List<AnimeModel> fromJsonArray(JSONArray json) {                
         List<AnimeModel> animes = new ArrayList<>();
         for (Object anime :
-        array) {
+        json) {
             animes.add(fromJson((JSONObject) anime));
         }
         return animes;
@@ -45,7 +44,8 @@ public class AnimeModel {
 
     @Override
     public String toString() {
-        return "AnimeModel { episodes=" + episodes + ", image_url=" + image_url + ", score=" + score + ", synopsis="
-                + synopsis + ", title=" + title + "}";
+        return "AnimeModel { \ntitle= " + title + ",\n image_url= " + image_url + ",\n score= " + score + ",\n synopsis= "
+                + synopsis + ",\n episodes= " + episodes
+                 + "\n}";
     }
 }

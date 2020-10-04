@@ -14,7 +14,7 @@ public class AnimeController {
     }
  
     public void getAnimes(String search){
-        this.list = this.dao.getListAnimes(search);
+        this.list = this.dao.getListApi(search);
         for (AnimeModel animeModel : list) {
             System.out.println(animeModel);
         }
