@@ -48,4 +48,26 @@ public class AnimeModel {
                 + synopsis + ",\n episodes= " + episodes
                  + "\n}";
     }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getImage_url() {
+        return image_url;
+    }
+
+    public String getSynopsis() {
+        return synopsis;
+    }
+
+    public int getEpisodes() {
+        return episodes;
+    }
+
+    public double getScore() {
+        return score;
+    }
+
+   
 }

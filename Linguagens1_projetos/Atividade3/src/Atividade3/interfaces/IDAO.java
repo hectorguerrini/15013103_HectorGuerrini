@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface IDAO <T>{
     List<T> getListDB(String search);
-    void createDB(T t);
+    void insertTable(T t);
     List<T> getListApi(String search);
     
 }
