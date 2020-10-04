@@ -33,7 +33,7 @@ public class AnimeModel {
         );        
     }
 
-    public static List<AnimeModel> fromJsonArray(String json) {
+    public static List<AnimeModel> fromJsonArray(JSONArray json) {
         
         JSONArray array = new JSONArray(json);
         List<AnimeModel> animes = new ArrayList<>();

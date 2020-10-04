@@ -27,7 +27,7 @@ public class AnimeDao {
             System.out.println("Recebidos:");            
             JSONObject meuJson = new JSONObject(response.body());
             JSONArray array = meuJson.getJSONArray("results");
-            return AnimeModel.fromJsonArray(array.toString());
+            return AnimeModel.fromJsonArray(array);
         } catch (Exception e) {
             return new ArrayList<AnimeModel>();          
         }
